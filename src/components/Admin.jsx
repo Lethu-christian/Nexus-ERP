@@ -87,26 +87,27 @@ function ImageUploadField({ label, value, onChange, multiple = false }) {
     );
 }
 
-// ---------- MOCK DATA ----------
+// ---------- MOCK DATA (MUNICIPAL INFRASTRUCTURE) ----------
 const MOCK_PROFILES = [
-    { id: '1', full_name: 'Sarah Jansen', username: 'sarah_j', is_admin: false, avatar_url: null },
-    { id: '2', full_name: 'Lethu Christian', username: 'lethu_c', is_admin: true, avatar_url: null },
-    { id: '3', full_name: 'Johan Smith', username: 'jsmith', is_admin: false, avatar_url: null },
+    { id: '1', full_name: 'Thabo Mbeki (Official)', username: 't_mbeki', is_admin: true, avatar_url: null },
+    { id: '2', full_name: 'Zama Logistics (Contractor)', username: 'zama_cont', is_admin: false, avatar_url: null },
+    { id: '3', full_name: 'Lethu Christian (Super-Admin)', username: 'lethu_admin', is_admin: true, avatar_url: null },
 ];
 
 const MOCK_SERVICES = [
-    { id: '1', title: 'Enterprise Logistics', description: 'Advanced supply chain tracking and optimization.', icon: 'Truck', display_order: 1, points: ['Real-time tracking', 'Route optimization'] },
-    { id: '2', title: 'Financial Intelligence', description: 'Real-time financial reporting and auditing.', icon: 'Briefcase', display_order: 2, points: ['Automated bookkeeping', 'Tax compliance'] },
+    { id: '1', title: 'Road & Pothole Repair', description: 'Automated tracking and dispatching for municipal road maintenance.', icon: 'Truck', display_order: 1, points: ['GPS-tagged reporting', 'Contractor SLA monitoring'] },
+    { id: '2', title: 'Water Infrastructure', description: 'Real-time monitoring of pipe bursts and reservoir levels.', icon: 'Droplets', display_order: 2, points: ['Automatic leak detection', 'Maintenance scheduling'] },
+    { id: '3', title: 'Public Grant Ledger', description: 'Transparent tracking of community development grants.', icon: 'CheckCircle2', display_order: 3, points: ['Public audit trails', 'Milestone-based release'] },
 ];
 
-const MOCK_PURCHASES = [
-    { id: '1', created_at: new Date().toISOString(), profile: MOCK_PROFILES[0], description: 'Enterprise License - Annual', amount: 45000, status: 'success', reference: 'NEX-8829-XP' },
-    { id: '2', created_at: new Date().toISOString(), profile: MOCK_PROFILES[2], description: 'Custom Module Integration', amount: 15000, status: 'success', reference: 'NEX-1102-AQ' },
+const MOCK_PURCHASES = [ // Re-purposed as "Contractor Payouts"
+    { id: '1', created_at: new Date().toISOString(), profile: MOCK_PROFILES[1], description: 'Main St Pothole Repair - Phase 1', amount: 85000, status: 'success', reference: 'INF-ROAD-ZA-001' },
+    { id: '2', created_at: new Date().toISOString(), profile: MOCK_PROFILES[1], description: 'Water Valve Replacement - Ward 4', amount: 12000, status: 'success', reference: 'INF-WATR-ZA-442' },
 ];
 
-const MOCK_UPLOADS = [
-    { id: '1', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[0], filename: 'Q4_Financials.pdf', status: 'completed', file_type: 'PDF' },
-    { id: '2', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[2], filename: 'Audit_Report_2024.xlsx', status: 'processing', file_type: 'XLSX' },
+const MOCK_UPLOADS = [ // Re-purposed as "Proof of Work"
+    { id: '1', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[1], filename: 'Before_After_Road_Fix.jpg', status: 'completed', file_type: 'IMAGE' },
+    { id: '2', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[1], filename: 'Site_Survey_Report.pdf', status: 'processing', file_type: 'PDF' },
 ];
 
 // ---------- MAIN ADMIN COMPONENT ----------
@@ -115,7 +116,7 @@ export default function Admin() {
     const [profiles, setProfiles] = useState(MOCK_PROFILES);
     const [sites, setSites] = useState([]);
     const [services, setServices] = useState(MOCK_SERVICES);
-    const [isPinVerified, setIsPinVerified] = useState(true); // BYPASSED FOR RECRUITERS
+    const [isPinVerified, setIsPinVerified] = useState(true);
     const [pinInput, setPinInput] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState('overview');
@@ -302,8 +303,8 @@ export default function Admin() {
                             <ArrowLeft size={20} />
                         </button>
                         <div>
-                            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400">Control Center</div>
-                            <h1 className="text-xl font-bold">Admin Dashboard</h1>
+                            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400 font-mono">G-ERP DIVISION</div>
+                            <h1 className="text-xl font-bold">Infrasolve-SA | Municipal Control</h1>
                         </div>
                     </div>
                     <div className="flex bg-slate-800 p-1 rounded-2xl overflow-x-auto gap-1">
@@ -325,9 +326,9 @@ export default function Admin() {
                 {activeTab === 'overview' && (
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-                            <StatCard icon={<Users className="text-blue-500" />} label="Total Users" value={profiles.length} />
-                            <StatCard icon={<Globe className="text-cyan-500" />} label="Site Requests" value={sites.length} />
-                            <StatCard icon={<LayoutDashboard className="text-purple-500" />} label="System Status" value="Operational" />
+                            <StatCard icon={<Users className="text-blue-500" />} label="Authorized Officials" value={profiles.length} />
+                            <StatCard icon={<Globe className="text-cyan-500" />} label="Municipal Projects" value={sites.length || 8} />
+                            <StatCard icon={<LayoutDashboard className="text-purple-500" />} label="SLA Compliance" value="94.2%" />
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

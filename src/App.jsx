@@ -34,8 +34,8 @@ import {
     Zap,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "27678846390";
-const EMAIL = "hello@lcxstudios.co";
+const WHATSAPP_NUMBER = "27618000000"; // Placeholder for Portfolio
+const EMAIL = "inquiries@infrasolve-sa.com";
 
 // --- ANIMATION VARIANTS (LUXURY FEEL) ---
 const luxuryEase = [0.16, 1, 0.3, 1];
@@ -63,64 +63,68 @@ const navItems = [
 
 const serviceCards = [
     {
-        icon: Code2,
-        title: "Custom Internal Software Systems",
-        desc: "Premium internal tools for staff, orders, finance, inventory, operations, and business control.",
-        cover_image: "/images/software-dashboard.png",
+        icon: Truck,
+        title: "Road & Pothole Repair Ecosystem",
+        desc: "Next-gen tracking for municipal road maintenance. Automated contractor dispatch and SLA monitoring.",
+        cover_image: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2070&auto=format&fit=crop",
         points: [
-            "Staff management systems",
-            "Order tracking systems",
-            "Admin dashboards",
-            "Finance/payment systems",
-            "Customer management systems",
-            "Inventory & operations systems",
+            "GPS-tagged pothole reporting",
+            "Contractor performance tracking",
+            "SLA violation alerts",
+            "Public repair timelines",
+            "Automated cost auditing",
+            "Mobile inspector portal",
         ],
-        whatsapp: "Hello, I want a custom internal software system.",
+        whatsapp: "Hello, I want to inquire about the Infrasolve Road Repair System.",
+        link: "/admin"
     },
     {
-        icon: ShieldCheck,
-        title: "Pageantry Voting Systems",
-        desc: "High-conversion online voting systems for pageants and events with public pages, rankings, and admin control.",
-        cover_image: "/images/voting-system.png",
+        icon: Droplets,
+        title: "Water Infrastructure Monitor",
+        desc: "Real-time leakage detection and reservoir level tracking to prevent water scarcity and infrastructure waste.",
+        cover_image: "https://images.unsplash.com/photo-1541830826422-79015c7e3f88?q=80&w=2070&auto=format&fit=crop",
         points: [
-            "Public voting pages",
-            "Contestant profiles",
-            "Rankings and gallery",
-            "Admin dashboard",
-            "Analytics and portals",
-            "Source code handover",
+            "Smart valve monitoring",
+            "Pipe burst alert system",
+            "Reservoir telemetry",
+            "Maintenance scheduling",
+            "Consumption analytics",
+            "Emergency response logs",
         ],
-        whatsapp: "Hello, I want a pageantry voting system.",
+        whatsapp: "Hello, I want to inquire about the Infrasolve Water Monitor.",
+        link: "/admin"
     },
     {
-        icon: ImageIcon,
-        title: "Poster Design Services",
-        desc: "Luxury poster design for pageants, modelling shows, entries opens, finalists, semi-finalists, and grand finale campaigns.",
-        cover_image: "/images/poster-design.png",
+        icon: CheckCircle2,
+        title: "Public Grant Accountability",
+        desc: "A transparent ledger for tracking national and local grants, ensuring funds reach intended community projects.",
+        cover_image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
         points: [
-            "Finalist posters",
-            "Semi-finalist posters",
-            "Entries open posters",
-            "Grand finale posters",
-            "Custom event visuals",
-            "Creative direction",
+            "Public audit trail",
+            "Milestone-based payouts",
+            "Documented proof of work",
+            "Corruption-resistant logging",
+            "Project status visualization",
+            "Community feedback loop",
         ],
-        whatsapp: "Hello, I want poster design services.",
+        whatsapp: "Hello, I want to inquire about the Infrasolve Grant Ledger.",
+        link: "/admin"
     },
     {
-        icon: Palette,
-        title: "Logo Design Services",
-        desc: "Modern logo systems and premium visual identity design for brands, events, creators, and businesses.",
-        cover_image: "/images/logo-design.png",
+        icon: LayoutDashboard,
+        title: "Municipal G-ERP Portal",
+        desc: "The central command center for municipal officials to manage staff, resources, and citizen service requests.",
+        cover_image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
         points: [
-            "Brand logos",
-            "Event logos",
-            "Premium concepts",
-            "Visual identity direction",
-            "Modern company marks",
-            "High-end brand feel",
+            "Official registry",
+            "Financial oversight",
+            "Resource allocation",
+            "KPI tracking dashboards",
+            "Internal communication",
+            "Policy enforcement logs",
         ],
-        whatsapp: "Hello, I want logo design services.",
+        whatsapp: "Hello, I want to inquire about the Infrasolve G-ERP Portal.",
+        link: "/admin"
     }
 ];
 
@@ -153,144 +157,104 @@ const posterPricing = [
 
 const votingPackages = [
     {
-        name: "Voting Only Package",
-        price: "R45,000",
-        support: "2 months service support/control",
-        whatsapp: "Hello, I’m interested in your Voting Only Package.",
+        name: "Infrastructure Pilot Package",
+        price: "R150,000",
+        support: "3 months intensive field support",
+        whatsapp: "Hello, I’m interested in the Infrasolve Infrastructure Pilot.",
         featured: false,
         features: [
-            "Public voting page",
-            "Contestant profiles",
-            "Gallery page",
-            "Rankings page",
-            "Admin dashboard for contestants and gallery updates",
-            "No analytics page",
-            "No login/register portal",
-            "No ticketing",
-            "No advanced client portal",
-            "Client receives the full source code",
+            "Single municipality deployment",
+            "Pothole tracking module",
+            "Citizen reporting portal",
+            "Basic admin dashboard",
+            "Field agent mobile access",
+            "SLA monitoring core",
+            "Public transparency page",
+            "3 months technical oversight",
         ],
     },
     {
-        name: "Full Voting System",
-        price: "R100,000",
-        support: "1 year service support/control",
-        whatsapp: "Hello, I’m interested in the Full Voting System.",
+        name: "National G-ERP Suite",
+        price: "R1,200,000+",
+        support: "Multi-year SLA & Dedicated Support",
+        whatsapp: "Hello, I’m interested in the National G-ERP Suite.",
         featured: true,
         features: [
-            "Everything in Voting Only",
-            "Full analytics/dashboard",
-            "Advanced admin controls",
-            "Login and registration",
-            "Client portal",
-            "Additional advanced features",
-            "Scalable full system",
-            "Client receives the full source code",
+            "Multi-municipality integration",
+            "Full Water & Road monitoring",
+            "Public Grant Accountability Ledger",
+            "Advanced Financial Oversight",
+            "Official Registry & HR Management",
+            "API Access for Gov Departments",
+            "Blockchain-backed audit logs",
+            "24/7 Priority Support",
         ],
     },
 ];
 
 const digitalBusinessPackages = [
     {
-        name: "Startup Website Package",
-        price: "R6,000 – R12,000",
-        bestFor: "Startups, small shops, personal brands, and small service businesses.",
-        delivery: "7–10 days",
-        whatsapp: "Hello, I’m interested in your Startup Website Package.",
+        name: "Transparency Portal",
+        price: "R45,000",
+        bestFor: "Municipalities needing a public grant and project tracker.",
+        delivery: "14 days",
+        whatsapp: "Hello, I’m interested in the Transparency Portal.",
         featured: false,
         features: [
-            "4–6 page professional website",
-            "Mobile responsive design",
-            "Contact form",
-            "Google Maps integration",
-            "WhatsApp chat button",
-            "Basic SEO setup",
-            "Social media links"
+            "Public project dashboard",
+            "Financial grant logs",
+            "Citizen feedback system",
+            "Documented proof of work",
+            "Searchable project database",
+            "Automated weekly reports",
+            "Secure admin upload portal"
         ],
-        pages: ["Home", "About", "Services", "Contact", "Gallery"]
     },
     {
-        name: "Business Website Package",
-        price: "R15,000 – R30,000",
-        bestFor: "Growing businesses that need a professional online presence.",
-        delivery: "10–14 days",
-        whatsapp: "Hello, I’m interested in your Business Website Package.",
+        name: "Full Infrastructure ERP",
+        price: "R250,000 – R500,000",
+        bestFor: "Metros needing end-to-end service delivery tracking.",
+        delivery: "4–6 weeks",
+        whatsapp: "Hello, I’m interested in the Full Infrastructure ERP.",
         featured: true,
         features: [
-            "6–10 page professional website",
-            "Mobile optimized design",
-            "Contact forms and lead capture",
-            "WhatsApp integration",
-            "Basic SEO optimization",
-            "Blog/news section",
-            "Admin panel for content updates",
-            "Google Analytics integration"
+            "Road & Water maintenance modules",
+            "Contractor SLA monitoring",
+            "Official registry (Staff & Contractors)",
+            "Financial disbursement ledger",
+            "KPI tracking & Analytics",
+            "Field agent mobile apps",
+            "Public accountability API",
+            "Enterprise-grade security"
         ],
-        addons: ["Online booking system"]
-    },
-    {
-        name: "E-Commerce Website Package",
-        price: "R30,000 – R60,000",
-        bestFor: "Businesses selling products online.",
-        delivery: "2–3 weeks",
-        whatsapp: "Hello, I’m interested in your E-Commerce Website Package.",
-        featured: false,
-        features: [
-            "Full online store",
-            "Product catalog management",
-            "Secure payment gateway integration (Paystack / Yoco / PayFast)",
-            "Shopping cart and checkout system",
-            "Order management dashboard",
-            "Customer accounts",
-            "Inventory tracking",
-            "Mobile optimized store"
-        ]
-    },
-    {
-        name: "Advanced Business System + Website",
-        price: "R55,000 – R100,000",
-        bestFor: "Businesses needing internal systems + website integration.",
-        delivery: "3–5 weeks",
-        whatsapp: "Hello, I’m interested in your Advanced Business System + Website package.",
-        featured: true,
-        features: [
-            "Custom website design (Mobile responsive & SEO optimized)",
-            "Contact forms and lead capture",
-            "Employee portal & HR leave request system",
-            "Sick note submission portal",
-            "Admin approval dashboard",
-            "Payroll creation system & Employee records management",
-            "Financial Verification (Bank statements, Payment search & history)",
-            "Admin Dashboard (Staff activity logs, HR requests, Financial reports)"
-        ]
     }
 ];
 
 
 const rentalPackages = [
     {
-        name: "1 Month Rental",
-        price: "R6,000",
-        desc: "Includes custom domain & hosting for 1 month.",
-        whatsapp: "Hello, I want to rent the voting system for 1 month.",
-    },
-    {
-        name: "3 Months Rental",
-        price: "R8,000",
-        desc: "Includes custom domain & hosting for 3 months.",
-        whatsapp: "Hello, I want to rent the voting system for 3 months.",
-    },
-    {
-        name: "6 Months Rental",
-        price: "R10,000",
-        desc: "Includes custom domain & hosting for 6 months.",
-        whatsapp: "Hello, I want to rent the voting system for 6 months.",
-    },
-    {
-        name: "1 Year Rental",
+        name: "1 Month Pilot",
         price: "R15,000",
-        desc: "Includes custom domain & hosting for 12 months.",
-        whatsapp: "Hello, I want to rent the voting system for 12 months.",
+        desc: "Full system access for a single department to test workflow efficiency.",
+        whatsapp: "Hello, I want to start a 1-month Infrasolve pilot.",
+    },
+    {
+        name: "3 Months Trial",
+        price: "R35,000",
+        desc: "Includes on-site training for 10 officials and full data integration.",
+        whatsapp: "Hello, I want to start a 3-month Infrasolve trial.",
+    },
+    {
+        name: "6 Months Rollout",
+        price: "R60,000",
+        desc: "Expanded deployment across 3 municipal departments.",
+        whatsapp: "Hello, I want to start a 6-month Infrasolve rollout.",
+    },
+    {
+        name: "1 Year License",
+        price: "R100,000",
+        desc: "Full annual license with 24/7 technical support and maintenance.",
+        whatsapp: "Hello, I want to inquire about a 1-year Infrasolve license.",
     },
 ];
 
@@ -385,9 +349,10 @@ function TopNav({ session, onPortalClick }) {
         )}>
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
                 <Link to="/" className="flex items-center gap-4 transition-transform hover:scale-105 active:scale-95">
-                    <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200/50 bg-white/40 backdrop-blur-md shadow-sm overflow-hidden p-1.5">
-                        <img src="/logo.png" alt="LCX Logo" className="h-full w-full object-contain" />
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 backdrop-blur-md shadow-sm overflow-hidden p-1.5">
+                        <img src="/infrasolve_logo.png" alt="Infrasolve Logo" className="h-full w-full object-contain" />
                     </div>
+                    <span className="text-xl font-black tracking-tighter text-slate-800 uppercase">Infrasolve-SA</span>
                 </Link>
 
                 <nav className="hidden items-center gap-10 md:flex">
@@ -465,13 +430,13 @@ function Hero() {
                         variants={fadeUpVariant}
                         initial="hidden"
                         animate="visible"
-                        className="mb-8 inline-flex items-center gap-3 rounded-full border border-slate-200/50 bg-white/40 backdrop-blur-md px-5 py-2.5 text-[10px] font-black uppercase tracking-[0.4em] text-slate-950 shadow-sm w-fit"
+                        className="mb-8 inline-flex items-center gap-3 rounded-full border border-blue-200/50 bg-blue-50/40 backdrop-blur-md px-5 py-2.5 text-[10px] font-black uppercase tracking-[0.4em] text-blue-900 shadow-sm w-fit"
                     >
                         <div className="relative flex h-2 w-2">
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-500 opacity-75"></span>
-                            <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-600"></span>
                         </div>
-                        Premium Technology Studio
+                        G-ERP Innovation Division
                     </motion.div>
 
                     <h1
@@ -480,7 +445,7 @@ function Hero() {
                         animate="visible"
                         className="text-3xl font-black tracking-tighter text-slate-950 sm:text-5xl md:text-7xl lg:text-8xl leading-[1.05]"
                     >
-                        Crafting <span className="text-blue-600">elite</span> digital systems.
+                        Infrasolve-SA | Municipal <span className="text-blue-600">Infrastructure</span>
                     </h1>
 
                     <motion.p
@@ -489,8 +454,8 @@ function Hero() {
                         animate="visible"
                         className="mt-10 max-w-2xl text-lg font-medium leading-[1.6] text-slate-500 sm:text-xl"
                     >
-                        LCX STUDIOS is a next-gen technology house specialized in custom internal software,
-                        SaaS architecture, and high-performance pageant voting systems.
+                        A next-generation ERP system designed to optimize South African municipal operations, 
+                        tracking everything from pothole repairs to public grant disbursements with absolute transparency.
                     </motion.p>
 
                     <motion.div
