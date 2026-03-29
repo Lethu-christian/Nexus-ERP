@@ -87,18 +87,40 @@ function ImageUploadField({ label, value, onChange, multiple = false }) {
     );
 }
 
+// ---------- MOCK DATA ----------
+const MOCK_PROFILES = [
+    { id: '1', full_name: 'Sarah Jansen', username: 'sarah_j', is_admin: false, avatar_url: null },
+    { id: '2', full_name: 'Lethu Christian', username: 'lethu_c', is_admin: true, avatar_url: null },
+    { id: '3', full_name: 'Johan Smith', username: 'jsmith', is_admin: false, avatar_url: null },
+];
+
+const MOCK_SERVICES = [
+    { id: '1', title: 'Enterprise Logistics', description: 'Advanced supply chain tracking and optimization.', icon: 'Truck', display_order: 1, points: ['Real-time tracking', 'Route optimization'] },
+    { id: '2', title: 'Financial Intelligence', description: 'Real-time financial reporting and auditing.', icon: 'Briefcase', display_order: 2, points: ['Automated bookkeeping', 'Tax compliance'] },
+];
+
+const MOCK_PURCHASES = [
+    { id: '1', created_at: new Date().toISOString(), profile: MOCK_PROFILES[0], description: 'Enterprise License - Annual', amount: 45000, status: 'success', reference: 'NEX-8829-XP' },
+    { id: '2', created_at: new Date().toISOString(), profile: MOCK_PROFILES[2], description: 'Custom Module Integration', amount: 15000, status: 'success', reference: 'NEX-1102-AQ' },
+];
+
+const MOCK_UPLOADS = [
+    { id: '1', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[0], filename: 'Q4_Financials.pdf', status: 'completed', file_type: 'PDF' },
+    { id: '2', created_at: new Date().toISOString(), profiles: MOCK_PROFILES[2], filename: 'Audit_Report_2024.xlsx', status: 'processing', file_type: 'XLSX' },
+];
+
 // ---------- MAIN ADMIN COMPONENT ----------
 export default function Admin() {
     const [loading, setLoading] = useState(false);
-    const [profiles, setProfiles] = useState([]);
+    const [profiles, setProfiles] = useState(MOCK_PROFILES);
     const [sites, setSites] = useState([]);
-    const [services, setServices] = useState([]);
-    const [isPinVerified, setIsPinVerified] = useState(false);
+    const [services, setServices] = useState(MOCK_SERVICES);
+    const [isPinVerified, setIsPinVerified] = useState(true); // BYPASSED FOR RECRUITERS
     const [pinInput, setPinInput] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState('overview');
-    const [purchases, setPurchases] = useState([]);
-    const [financialUploads, setFinancialUploads] = useState([]);
+    const [purchases, setPurchases] = useState(MOCK_PURCHASES);
+    const [financialUploads, setFinancialUploads] = useState(MOCK_UPLOADS);
     const [toast, setToast] = useState(null);
     const navigate = useNavigate();
 
@@ -116,8 +138,9 @@ export default function Admin() {
     };
 
     useEffect(() => {
-        const savedPin = localStorage.getItem('adminPin');
-        if (savedPin === '1965') { setIsPinVerified(true); fetchData(); }
+        // Mocking a data fetch delay
+        setLoading(true);
+        setTimeout(() => setLoading(false), 800);
     }, []);
 
     const handlePinSubmit = (e) => {

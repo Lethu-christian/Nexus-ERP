@@ -1270,7 +1270,14 @@ function AdminPage() {
 
 function PageLayout({ children, session, onPortalClick, showAuth, setShowAuth, showAccount, setShowAccount }) {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white selection:bg-blue-100 selection:text-blue-900 scroll-smooth">
+            {/* Mockup Mode Banner */}
+            <div className="fixed top-0 left-0 right-0 z-[100] bg-blue-600/10 border-b border-blue-500/20 py-1 px-4 text-center backdrop-blur-md">
+                <p className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-500 flex items-center justify-center gap-2">
+                    <ShieldCheck size={10} /> Portfolio Mockup Design — Display Only
+                </p>
+            </div>
+            
             <TopNav session={session} onPortalClick={onPortalClick} />
             <main>{children}</main>
             <Footer />
